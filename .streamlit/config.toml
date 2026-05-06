@@ -1,0 +1,6 @@
+# Streamlit Community Cloud / local runs — keep minimal
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false

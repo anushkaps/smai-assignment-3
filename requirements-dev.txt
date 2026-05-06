@@ -1,0 +1,5 @@
+# Optional: evaluation notebook and local analysis (not required to deploy the Streamlit app)
+-r requirements.txt
+pandas
+matplotlib
+notebook
