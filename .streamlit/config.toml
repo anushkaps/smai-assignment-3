@@ -1,4 +1,4 @@
-# Streamlit Community Cloud / local runs — keep minimal
+# Streamlit Community Cloud / local runs - keep minimal
 [server]
 headless = true
 

@@ -1,2 +1,2 @@
-# Same as requirements.txt — kept for workflows that install with `-r requirements-dev.txt`.
+# Same as requirements.txt - kept for workflows that install with `-r requirements-dev.txt`.
 -r requirements.txt

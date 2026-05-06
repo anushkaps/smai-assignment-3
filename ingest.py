@@ -1,7 +1,7 @@
 """
 Ingest official Passport Seva PDFs into ChromaDB with sentence-transformers embeddings.
 
-SMAI Assignment 3 — T10.1 Passport Assistant (Tier 1). No training; indexing only.
+SMAI Assignment 3 - T10.1 Passport Assistant (Tier 1). No training; indexing only.
 """
 
 from __future__ import annotations

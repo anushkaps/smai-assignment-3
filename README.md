@@ -1,18 +1,18 @@
 # Passport Seva RAG Assistant
 
-**SMAI Assignment 3 — Government-Services RAG Chatbot**
+**SMAI Assignment 3 - Government-Services RAG Chatbot**
 
 | Field | Value |
 |--------|--------|
 | **Variant** | **T10.1 Passport Assistant** |
 | **Tier** | **Tier 1** |
-| **Course context** | Statistical Methods / AI — retrieval-augmented demo (no model training) |
+| **Course context** | Statistical Methods / AI - retrieval-augmented demo (no model training) |
 
 ---
 
 ## Problem statement
 
-Indian **Passport Seva** procedures (application, documents, appointments, Tatkaal, status, police verification) are spread across **official PDFs** and the portal. Users need **accurate, citeable** guidance. This project builds a **Streamlit RAG chatbot** that answers questions using **only** text retrieved from **locally stored official PDFs**, with **filename + page** citations—reducing unsupported “general knowledge” answers in a college demo setting.
+Indian **Passport Seva** procedures (application, documents, appointments, Tatkaal, status, police verification) are spread across **official PDFs** and the portal. Users need **accurate, citeable** guidance. This project builds a **Streamlit RAG chatbot** that answers questions using **only** text retrieved from **locally stored official PDFs**, with **filename + page** citations - reducing unsupported “general knowledge” answers in a college demo setting.
 
 ---
 
@@ -82,7 +82,7 @@ passport-rag-chatbot/
 | Public GitHub repo structure | **`app.py`**, **`ingest.py`**, **`rag.py`**, **`config.py`**, **`requirements.txt`**, **`.env`**, **`README.md`**, **`notebooks/evaluation.ipynb`**, **`report/technical-report.md`**, **`pitch/one-slide-pitch.md`**, **`data/pdfs/`**, **`.gitignore`** |
 | No training notebook | Use **`notebooks/evaluation.ipynb`** (retrieval + qualitative evaluation only) |
 | Citations in answers | **PDF filename + page** from retrieval; listed under **Sources** in the UI |
-| Anti-hallucination prompt | **`rag.py`** `build_prompt` — context-only, exact fallback sentence, portal verification |
+| Anti-hallucination prompt | **`rag.py`** `build_prompt` - context-only, exact fallback sentence, portal verification |
 | Deployment readiness | **`requirements.txt`**; Streamlit **Secrets** wiring in **`app.py`**; paths in **`config.py`** anchored to project root; see below |
 
 ---
@@ -155,7 +155,7 @@ Streamlit Community Cloud **does not** run `python ingest.py` automatically when
 | **B. In-app “Build index”** | PDFs are in `data/pdfs/` in the repo (or you add them later and redeploy). Use the sidebar **Build index from PDFs** once after deploy; wait for CPU indexing to finish. Good for demos; first run is slow. |
 | **C. Local-only index** | Run `ingest.py` on your machine, demo with `streamlit run app.py`, or record a **video** for submission if hosting without a stable index is awkward. |
 
-The sidebar **Build index** button is intentionally simple: it calls `ingest.main()` and clears RAG caches—**no extra services**.
+The sidebar **Build index** button is intentionally simple: it calls `ingest.main()` and clears RAG caches - **no extra services**.
 
 ---
 
@@ -264,11 +264,11 @@ Document outcomes in the **Technical Report** and optionally add short notes in 
 
 ## Limitations
 
-- **Depends on which PDFs you download** — coverage and freshness are **your** responsibility.
+- **Depends on which PDFs you download** - coverage and freshness are **your** responsibility.
 - **Outdated PDFs** → answers may not match the **live** portal.
 - **Scanned** or image-only PDFs → `pypdf` may extract little text (no OCR in Tier 1).
-- **Not legal advice** — users must **verify** on the **official Passport Seva** portal.
-- **API limits** — Gemini/network errors are possible; handled with user-visible messages.
+- **Not legal advice** - users must **verify** on the **official Passport Seva** portal.
+- **API limits** - Gemini/network errors are possible; handled with user-visible messages.
 
 ---
 
@@ -283,7 +283,7 @@ Document outcomes in the **Technical Report** and optionally add short notes in 
 
 ## References
 
-1. Passport Seva — official portal (India): [https://www.passportindia.gov.in/](https://www.passportindia.gov.in/)  
+1. Passport Seva - official portal (India): [https://www.passportindia.gov.in/](https://www.passportindia.gov.in/)  
 2. Streamlit: [https://docs.streamlit.io/](https://docs.streamlit.io/)  
 3. ChromaDB: [https://docs.trychroma.com/](https://docs.trychroma.com/)  
 4. Sentence Transformers: [https://www.sbert.net/](https://www.sbert.net/)  
@@ -294,7 +294,7 @@ Document outcomes in the **Technical Report** and optionally add short notes in 
 
 ## LLM usage acknowledgement
 
-Generative assistants (**ChatGPT**, **Cursor**, **Gemini**, etc.) may have been used for **code scaffolding**, **debugging**, and **drafting** README/report text. **Evaluation**, **PDF selection**, **ingestion runs**, **manual testing**, and **final academic analysis** are the responsibility of the project authors. Course plagiarism and disclosure rules apply—cite tools per your instructor’s policy.
+Generative assistants (**ChatGPT**, **Cursor**, **Gemini**, etc.) may have been used for **code scaffolding**, **debugging**, and **drafting** README/report text. **Evaluation**, **PDF selection**, **ingestion runs**, **manual testing**, and **final academic analysis** are the responsibility of the project authors. Course plagiarism and disclosure rules apply - cite tools per your instructor’s policy.
 
 ---
 

@@ -1,7 +1,7 @@
 """
 Retrieval-Augmented Generation: Chroma retrieval + Gemini generation with citations.
 
-SMAI Assignment 3 — T10.1 Passport Assistant (Tier 1). Pre-trained embeddings only; no training.
+SMAI Assignment 3 - T10.1 Passport Assistant (Tier 1). Pre-trained embeddings only; no training.
 """
 
 from __future__ import annotations
@@ -157,7 +157,7 @@ def retrieve_context(query: str, top_k: int = TOP_K) -> list[dict]:
 
 
 def format_context(contexts: list[dict]) -> str:
-    """Format retrieved chunks for the LLM (internal labels — must not appear in the answer)."""
+    """Format retrieved chunks for the LLM (internal labels - must not appear in the answer)."""
     if not contexts:
         return ""
 
@@ -195,7 +195,7 @@ STRICT RULES (anti-hallucination):
 
 Answer guidelines (polished, citizen-friendly):
 - Write clearly for a general reader. Use short paragraphs and numbered steps when the excerpts describe a process.
-- Summarize naturally. If multiple excerpts repeat the same idea, merge it once—do not sound like a dump of snippets.
+- Summarize naturally. If multiple excerpts repeat the same idea, merge it once - do not sound like a dump of snippets.
 - Do NOT mention internal labels such as "Excerpt 1", "Excerpt 2", "SOURCE 1", or any "Excerpt N" / "SOURCE N" text in your answer.
 - Do NOT paste bracketed citation tags into the answer body.
 - Include only sections that have real content from the excerpts:

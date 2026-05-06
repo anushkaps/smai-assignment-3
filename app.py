@@ -1,6 +1,6 @@
 """
 Streamlit chat UI for the Passport Seva RAG Assistant.
-SMAI Assignment 3 — Government-Services RAG (T10.1 Passport Assistant, Tier 1).
+SMAI Assignment 3 - Government-Services RAG (T10.1 Passport Assistant, Tier 1).
 """
 
 from __future__ import annotations
@@ -62,7 +62,7 @@ def render_sidebar() -> None:
     with st.sidebar:
         st.markdown("### Passport Seva RAG Assistant")
         st.caption(
-            "SMAI A3 — **T10.1 Passport Assistant** (Tier 1). "
+            "SMAI A3 - **T10.1 Passport Assistant** (Tier 1). "
             "Grounded in **your local** official PDFs only."
         )
 
@@ -98,7 +98,7 @@ def render_sidebar() -> None:
                 try:
                     import ingest as ingest_module
 
-                    with st.spinner("Indexing PDFs (CPU) — please wait…"):
+                    with st.spinner("Indexing PDFs (CPU) - please wait…"):
                         ingest_module.main()
                     reset_runtime_caches()
                     n = vector_store_document_count()

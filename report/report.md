@@ -1,7 +1,7 @@
 # Technical Report: Passport Seva RAG Assistant
 
-**Course/Assignment:** SMAI Assignment 3 — Government-Services RAG Chatbot  
-**Variant/Tier:** T10.1 Passport Assistant — Tier 1  
+**Course/Assignment:** SMAI Assignment 3 - Government-Services RAG Chatbot  
+**Variant/Tier:** T10.1 Passport Assistant - Tier 1  
 **Authors:** *[Your Name(s)]*  
 **Date:** *[Submission Date]*  
 
@@ -71,7 +71,7 @@ This project uses **pre-trained weights** only:
 **Pipeline:**  
 User Question → Query Embedding → ChromaDB Retrieval → Retrieved Official PDF Chunks → Gemini Prompt → Answer with Citations → Streamlit Chat UI
 
-### 3.2 PDF ingestion (offline indexing) — `ingest.py`
+### 3.2 PDF ingestion (offline indexing) - `ingest.py`
 
 1. **Load PDFs** from `data/pdfs/`.
 2. **Extract text per page** with `pypdf`.
@@ -88,7 +88,7 @@ User Question → Query Embedding → ChromaDB Retrieval → Retrieved Official 
 
 On repeated runs, the Chroma collection is deleted and recreated so the index exactly matches the current PDFs.
 
-### 3.3 Retrieval (online at question time) — `rag.py`
+### 3.3 Retrieval (online at question time) - `rag.py`
 
 For a user question \(q\):
 1. Compute embedding \(E(q)\) using the same embedding model.
