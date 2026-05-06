@@ -1,5 +1,2 @@
-# Optional: evaluation notebook and local analysis (not required to deploy the Streamlit app)
+# Same as requirements.txt — kept for workflows that install with `-r requirements-dev.txt`.
 -r requirements.txt
-pandas
-matplotlib
-notebook

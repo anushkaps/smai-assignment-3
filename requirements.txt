@@ -1,4 +1,4 @@
-# Runtime dependencies for app.py, ingest.py, rag.py (Streamlit Community Cloud + local)
+# All dependencies: Streamlit app, ingestion, RAG, and evaluation notebook (local/analysis).
 streamlit>=1.28.0
 # sentence-transformers -> huggingface transformers may import vision helpers; Streamlit's watcher
 # can trigger those code paths → ModuleNotFoundError: torchvision without explicit installs.
@@ -9,3 +9,8 @@ chromadb
 pypdf
 python-dotenv
 google-genai
+
+# notebooks/evaluation.ipynb and local evaluation
+pandas
+matplotlib
+notebook

@@ -56,8 +56,8 @@ passport-rag-chatbot/
 ├── ingest.py
 ├── rag.py
 ├── config.py
-├── requirements.txt         # App + ingestion (used by Streamlit Cloud)
-├── requirements-dev.txt     # Notebook: pandas, matplotlib, jupyter (optional)
+├── requirements.txt         # App, ingestion, RAG + notebook deps (used by Streamlit Cloud)
+├── requirements-dev.txt    # Alias: same as requirements.txt (optional installs)
 ├── .env
 ├── .gitignore               # Excludes .env, venv, chroma_db data, local secrets
 ├── .streamlit/
@@ -115,10 +115,8 @@ Use **clear filenames** (rename after download if needed), for example:
 
 ### 2. Dependencies
 
-- Cloud installs from **`requirements.txt`** in the repo root (Streamlit, **PyTorch + torchvision** for `sentence-transformers` / `transformers` compatibility, Chroma, PDF parsing, Gemini SDK).
-- For the **evaluation notebook** locally:  
-  `pip install -r requirements-dev.txt`  
-  (includes `requirements.txt` plus pandas, matplotlib, notebook).
+- Cloud installs from **`requirements.txt`** in the repo root (Streamlit, **PyTorch + torchvision**, sentence-transformers, Chroma, PDF parsing, Gemini SDK, plus **pandas**, **matplotlib**, **notebook** for evaluation).
+- Local setup: **`pip install -r requirements.txt`**. **`requirements-dev.txt`** is the same bundle via `-r requirements.txt` if you prefer that habit.
 
 ### 3. Add `GEMINI_API_KEY` as a Streamlit secret (required on Cloud)
 
